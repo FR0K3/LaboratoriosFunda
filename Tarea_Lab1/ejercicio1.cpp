@@ -16,6 +16,6 @@ int main(){
     cout << endl << endl;
     int promedio = (num1 + num2 + num3)/(3);
     cout << "El promedio de los tres números es: " << promedio << endl;
-    
+
     return 0;
 }

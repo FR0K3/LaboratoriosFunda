@@ -17,6 +17,5 @@ int main(){
     } else{
         cout << n1 << " es igual a " << n2;
     }
-    
 
 }
