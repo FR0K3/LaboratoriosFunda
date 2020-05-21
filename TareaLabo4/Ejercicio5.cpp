@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     cout << endl;
-    cout << "----VERIFICACIÓN SI PRIMERA Y SEGUNDA LETRA DE UNA PALABRA SON LAS MISMAS----" << endl;
+    cout << "----VERIFICACIÓN SI PRIMERA Y ULTIMA LETRA DE UNA PALABRA SON LAS MISMAS----" << endl;
     string palabra;
     cout << "Escribe una palabra en para verificar:" << endl;
     cin >> palabra;
