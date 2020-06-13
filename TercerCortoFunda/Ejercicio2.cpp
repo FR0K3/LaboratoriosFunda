@@ -13,30 +13,32 @@ void adivinarNum(int n, int n1){
             } else{
                 intentos--; //se resta un intento
                 if(n > n1){
-                    cout << "El número ingresado es mayor que el número secreto, le quedan " << intentos << " intentos" << endl;                            
+                    cout << "El numero ingresado es mayor que el numero secreto, le quedan " << intentos << " intentos" << endl << endl;                            
                 } else{
-                    cout << "El número ingresado es menor que el número secreto, le quedan " << intentos << " intentos" << endl;
+                    cout << "El numero ingresado es menor que el numero secreto, le quedan " << intentos << " intentos" << endl << endl;
                 }
             }
         }
 
         /*INTENTOS RESTANTES PARA ADIVINAR EL NUMERO*/
         if(intentos < 5 && intentos > 0){ //Evaluar si todavia tiene intentos el usuario
-            cout << "Intente con otro numero por favor:";
+            cout << "Intente con otro numero por favor: ";
             cin >> n;
             if(n==n1){
                 cout << "Usted ha adivinado el numero secreto, el cual es: " << n1;
                 intentos = 0; //si adivina los intentos seran igual a cero para que termine el bucle     
             } else{
                 intentos--;
-                if(n > n1){ //evaluar si el numero ingresado es mayor o menor al numero a evaluar para dar una pista
-                    cout << "El número ingresado es mayor que el número secreto, le quedan " << intentos << " intentos" << endl;                            
+                if(intentos!= 0){ //evaluacion si le quedan intentos
+                    if(n > n1){ //evaluar si el numero ingresado es mayor o menor al numero a evaluar para dar una pista
+                        cout << "El numero ingresado es mayor que el numero secreto, le quedan " << intentos << " intentos" << endl << endl;                            
+                    } else{
+                        cout << "El numero ingresado es menor que el numero secreto, le quedan " << intentos << " intentos" << endl << endl;
+                    }
                 } else{
-                    cout << "El número ingresado es menor que el número secreto, le quedan " << intentos << " intentos" << endl;
+                    cout << "Se le agotaron los intentos, usted no ha adivinado el numero secreto, gracias por participar";
                 }
             }
-        } else{
-            cout << "Usted no ha adivinado el numero secreto";
         }
     } while(intentos > 0);
     
