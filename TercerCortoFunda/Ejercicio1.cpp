@@ -17,7 +17,7 @@ double calculoSalario(int h1, int h2){
     }
     return sal_real;
 }
-
+a
 
 int main(){
     int h_trab = 0;
