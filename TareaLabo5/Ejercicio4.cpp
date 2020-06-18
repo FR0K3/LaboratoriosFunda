@@ -43,7 +43,7 @@ int main(void){
     switch(mes){
         case 2:
             if(aBisiesto(year)){
-                while(dia >= 29 || dia < 0){
+                while(dia > 29 || dia < 0){
                     cout << "Ingresa un dia valido: ";
                     cin >> dia;
                 }
@@ -53,7 +53,7 @@ int main(void){
                     mes++;
                 }
             } else{
-                while(dia >= 28 || dia < 0){
+                while(dia > 28 || dia < 0){
                     cout << "Ingresa un dia valido: ";
                     cin >> dia;
                 }
