@@ -7,8 +7,6 @@ int main(void){
     int numero;
     int cont = 0;
     cout << endl << "CONTAR LAS VECES QUE SE ENCUENTRA UN NUMERO EN ARRAY" << endl << endl;
-    cout << "Ingresa un numero cualquiera: ";
-    cin >> numero;
     cout << "Ingresa la longitud del arreglo: ";
     cin >> longitud;
     cout << endl;
@@ -18,6 +16,10 @@ int main(void){
         cout << "Ingrese los valores del arreglo: ";
         cin >> array[i];
     }
+    
+    cout << endl;
+    cout << "Ingresa un numero cualquiera para ver cuantas veces se repite en el arreglo: ";
+    cin >> numero;
 
     for(int i = 0;i<longitud;i++){
         if(numero == array[i]){
@@ -25,7 +27,7 @@ int main(void){
         }
     }
 
-    cout << "El numero " << numero << " se repite " << cont << " veces";
+    cout << "El numero " << numero << " se repite " << cont << " veces en el arreglo";
     
     return 0;
 }
