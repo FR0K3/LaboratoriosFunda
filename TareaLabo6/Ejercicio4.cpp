@@ -4,10 +4,9 @@ using namespace std;
 
 void lecturaArray(int arreglo[], int x){
     for(int i = 0; i < x; i++){
-        cout << "Ingrese los valores del arreglo: ";
         cin >> arreglo[i];
     }
-    cout << "Has terminado de llenar el arreglo" << endl;
+    cout << "Has terminado de llenar el arreglo" << endl << endl;
 }
 
 void sumaArrays(int arreglo[], int arreglo2[], int x, int resultado[]){
@@ -16,10 +15,9 @@ void sumaArrays(int arreglo[], int arreglo2[], int x, int resultado[]){
     }
 }
 
-void desplegarResultado(int resul[]){
-    int longi /*(sizeof(resul)) / (sizeof(resul))*/;
+void desplegarResultado(int resul[], int longi){
     for(int i = 0; i < longi; i++){
-        cout << "El contenido de arreglo[" << i << "] es: " << resul[i];        
+        cout << "El contenido de arreglo[" << i << "] es: " << resul[i] <<endl;        
     }
 }
 
@@ -35,13 +33,15 @@ int main(void){
     int resultado[x];
     int acum = 0;
     
+    cout << "Ingrese los valores del arreglo 1: ";
     lecturaArray(array, x);
+    cout << "Ingrese los valores del arreglo 2: ";
     lecturaArray(array2, x);
     sumaArrays(array, array2, x, resultado);
 
     cout << endl;
     cout << "El tercer arreglo es la suma de cada uno de los elementos de los arreglos anteriores en la misma posicion: " <<endl;
-    desplegarResultado(resultado);
+    desplegarResultado(resultado, x);
 
 
 
